@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>Portfol.com</title>
+    <link rel="stylesheet" href="./assets/material-icon/material_icon.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="./js/main.js" defer></script>
+</head>
+<body>
+    <!-- HEADER [NavBar] -->
+    <header class="navbar">
+        <div class="wrapper">
+            <h3 class="logo">Faraaz<span>Y</span></h3>
+
+            <div class="menu-btn">
+                <i class="material-icons menu--open">menu</i>
+            </div>
+        </div>
+        <nav class="navlinks">
+            <i class="material-icons menu--close">close</i>
+            <ul class="nav-btn">
+                <li><a href="#" class="menu--close">Home</a></li>
+                <li><a href="#testimonials" class="menu--close">Testimonials</a></li>
+                <li><a href="#contact" class="menu--close">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- MAIN CONTENT AREA -->
+    <div class="main-wrapper">
+        <main class="hero--content">
+            <picture class="section hero-image--container">
+                <img src="./assets/image/me.jpg" alt="FaraazKhhan">
+            </picture>
+    
+            <article class="section intro--section">
+                <div class="wrapper">
+                    <h1 class="heading">Experience above everything <span>Always</span></h1>
+                    <p class="sub-heading">It comes with practice</p>
+                </div>
+            </article>
+    
+            <article class="section features--section">
+                <div class="wrapper">
+                    <ul class="features-list">
+                        <li>Easy to maintain</li>
+                        <li>Cheap in cost</li>
+                        <li>Performance oriented</li>
+                        <li>Highly scalable</li>
+                        <li>Mobile responsive</li>
+                    </ul>
+                </div>
+            </article>
+        </main>
+       
+        <section class="section testimonials" id="testimonials">
+            <div class="wrapper">
+                <ul class="testimonials-cards">
+                    <li class="card">
+                        <img src="./assets/image/1.jpg" alt="testimonal-1">
+                        <blockquote>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, iste!</blockquote>
+                        <cite>- Bob</cite>
+                    </li>
+                    <li class="card">
+                        <img src="./assets/image/1.jpg" alt="testimonal-1">
+                        <blockquote>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, maxime accusantium. Voluptatum amet mollitia nemo!</blockquote>
+                        <cite>- Renner</cite>
+                    </li>
+                    <li class="card">
+                        <img src="./assets/image/1.jpg" alt="testimonal-1">
+                        <blockquote>Lorem ipsum dolor sit amet consectetur adipisicing elit.</blockquote>
+                        <cite>- Evans</cite>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- <section class="section about--section">About</section> -->
+        <!-- photo, biodata -->
+
+        <!-- <section class="section skills--section">Skills</section> -->
+
+        <section class="section contact" id="contact">
+            <div class="wrapper">
+                <form action="#">
+                    <label for="name">Name</label>
+                    <input type="text" id="name">
+
+                    <label for="email">Email</label>
+                    <input type="text" id="email">
+
+                    <label for="message">Message</label>
+                    <textarea id="message" cols="30" rows="5"></textarea>
+
+                    <input type="submit" value="Send Message">
+                </form>
+
+                <picture class="map">
+                    <img src="./assets/map.png" alt="">
+                </picture>
+            </div>
+        </section>
+
+    </div>
+
+    <div class="section dialog--box">
+        <div class="wrapper" id="dialog">
+            <h2>Sorry!</h2>
+            <p>Website is not yet ready...</p>
+
+            <button type="button" class="dialog-close">Close</button>
+        </div>
+    </div>
+</body>
+</html>
