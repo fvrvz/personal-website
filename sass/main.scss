@@ -1,10 +1,16 @@
 /*  =================================
 *   Author: Faraaz Khhan
 *   Github: https://www.github.com/FaraazKhhan
-*   Date:   27-April-2021 (Second Commit)
+*   Date:   27-April-2021
     ================================= */
 
+// google font imports
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,600;1,200;1,300;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
 
+
+// variable file import
 @import 'variables';
 
 
@@ -183,7 +189,8 @@ header.navbar {
                 h1.heading {
                     font-size: clamp(2rem, 5vw, 3rem);
                     line-height: 1.2;
-                    font-family: $font-heading-bold;
+                    font-family: $font-heading;
+                    font-weight: 700;
                     color: $clr-heading-dark;
 
                     span {
@@ -213,6 +220,7 @@ header.navbar {
                         list-style-type: none;
                         color: $clr-heading-light;
                         font-size: clamp(1.2rem, 5vw, 2rem);
+                        margin: 0.6em 0;
 
                         display: flex;
                         align-items: center;
@@ -569,7 +577,8 @@ header.navbar {
             &::after {
                 content: 'try mobile version instead';
                 font-size: 1.2rem;
-                font-family: $font-heading-bold;
+                font-family: $font-heading;
+                font-weight: 600;
                 color: rgb(194, 54, 54);
 
                 position: absolute;
@@ -611,7 +620,8 @@ header.navbar {
             &::after {
                 content: 'try mobile version instead';
                 font-size: 1.5rem;
-                font-family: $font-heading-bold;
+                font-family: $font-heading;
+                font-weight: 600;
                 color: rgb(194, 54, 54);
 
                 position: absolute;
