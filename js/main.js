@@ -1,6 +1,6 @@
 const navbar = document.querySelector('nav');
 const navOpen = document.querySelector('.menu--open');
-const navClose = document.querySelectorAll('.menu--close');
+const navClose = document.querySelector('.menu--close');
 
 const submitBtn = document.querySelector('input[type=submit]');
 const dialogBody = document.querySelector('.dialog--box');
@@ -26,8 +26,6 @@ navOpen.addEventListener('click', () => {
 //     navbar.style.transform = 'translate(100%)';
 // });
 
-navClose.forEach((el) => {
-    el.addEventListener('click', () => {
-        navbar.style.transform = 'translateX(100%)';
-    });
+navClose.addEventListener('click', () => {
+    navbar.style.transform = 'translateX(100%)';
 });

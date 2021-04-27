@@ -1,0 +1,38 @@
+@mixin glass-gradient-white {
+    background: linear-gradient(132deg, rgba(255,255,255,0.1), rgba(255, 255, 255, 0.3));
+    backdrop-filter: blur(10px);
+}
+
+@mixin glass-gradient-black {
+    background: linear-gradient(-132deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5));
+    backdrop-filter: blur(10px);
+}
+
+@mixin glass-gradient-danger-background {
+    background: linear-gradient(132deg, rgba(248, 216, 219, 0.1), rgba(248, 216, 219, 0.5));
+    backdrop-filter: blur(10px);
+}
+
+@mixin glass-gradient-danger-box {
+    background: linear-gradient(132deg, rgba(209, 70, 70, 0.1), rgba(209, 70, 70, 0.5));
+    backdrop-filter: blur(20px);
+}
+
+
+// flex
+@mixin flex-all-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin flex-center-space-around {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+@mixin flex-wrap {
+    display: flex;
+    flex-wrap: wrap;
+}
