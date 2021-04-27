@@ -5,7 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <title>Portfol.com</title>
-    <link rel="stylesheet" href="./assets/material-icon/material_icon.css">
+    
+    <!-- FONT AWESOME 5 CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="./css/main.css">
     <script src="./js/main.js" defer></script>
 </head>
@@ -16,11 +18,12 @@
             <h3 class="logo">Faraaz<span>Y</span></h3>
 
             <div class="menu-btn">
-                <i class="material-icons menu--open">menu</i>
+                <i class="fa fa-lg fa-bars menu--open" aria-hidden="true"></i>
             </div>
         </div>
         <nav class="navlinks">
-            <i class="material-icons menu--close">close</i>
+            <i class="fa fa-lg fa-times menu--close" aria-hidden="true"></i>
+            
             <ul class="nav-btn">
                 <li><a href="#" class="menu--close">Home</a></li>
                 <li><a href="#testimonials" class="menu--close">Testimonials</a></li>
@@ -58,30 +61,41 @@
        
         <section class="section testimonials" id="testimonials">
             <div class="wrapper">
+                <h2>Testimonials</h2>
                 <ul class="testimonials-cards">
                     <li class="card">
-                        <img src="./assets/image/1.jpg" alt="testimonal-1">
                         <blockquote>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, iste!</blockquote>
-                        <cite>- Bob</cite>
+                        <footer>
+                            <img src="./assets/image/1.jpg" alt="testimonal-1">
+                            <cite>
+                                Bob Harris
+                                <p>CTO - Example.com</p>
+                            </cite>
+                        </footer>
                     </li>
                     <li class="card">
-                        <img src="./assets/image/1.jpg" alt="testimonal-1">
                         <blockquote>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, maxime accusantium. Voluptatum amet mollitia nemo!</blockquote>
-                        <cite>- Renner</cite>
+                        <footer>
+                            <img src="./assets/image/1.jpg" alt="testimonal-1">
+                            <cite>
+                                Jacob Renner
+                                <p>Senior UI/UX Designer - Example.com</p>
+                            </cite>
+                        </footer>
                     </li>
                     <li class="card">
-                        <img src="./assets/image/1.jpg" alt="testimonal-1">
                         <blockquote>Lorem ipsum dolor sit amet consectetur adipisicing elit.</blockquote>
-                        <cite>- Evans</cite>
+                        <footer>
+                            <img src="./assets/image/1.jpg" alt="testimonal-1">
+                            <cite>
+                                Chris Tobias
+                                <p>CEO - Example.com</p>
+                            </cite>
+                        </footer>
                     </li>
                 </ul>
             </div>
         </section>
-
-        <!-- <section class="section about--section">About</section> -->
-        <!-- photo, biodata -->
-
-        <!-- <section class="section skills--section">Skills</section> -->
 
         <section class="section contact" id="contact">
             <div class="wrapper">
@@ -103,11 +117,36 @@
                 </picture>
             </div>
         </section>
+        
+        <footer class="section footer">
+            <h3>Faraazy</h3>
+            <div class="social-wrapper">
+                <i class="fab fa-facebook facebook"></i>
+                <i class="fab fa-instagram instagram"></i>
+                <i class="fab fa-twitter twitter"></i>
+                <i class="fab fa-github github"></i><br>
+                <small>
+                    Written by <a href="mailto:faraazonwork@gmail.com">Faraaz Khhan</a><br>
+                </small>
+
+            </div>
+            <address>
+                <small>
+                    Address:<br>
+                    Guna, Madhya Pradesh<br>
+                    India<br>
+                    473001<br>
+                    <a href="https://faraazkhhan.github.io/portfolio" target="_blank" class="website">faraazkhhan.github.io/portfolio</a><br>
+                </small>
+            </address>
+            <p class="copyright">Copyright &copy; FaraazKhhan - 2021</p>
+        </footer>
 
     </div>
 
     <div class="section dialog--box">
         <div class="wrapper" id="dialog">
+            <i class="fas fa-2x fa-exclamation-triangle"></i>
             <h2>Sorry!</h2>
             <p>Website is not yet ready...</p>
 

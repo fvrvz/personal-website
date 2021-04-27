@@ -1,3 +1,8 @@
+/*  =================================
+*   Author: Faraaz Khhan
+*   Github: https://www.github.com/FaraazKhhan
+*   Date:   27-April-2021 (Second Commit)
+    ================================= */
 *, *::before, *::after {
   margin: 0;
   padding: 0;
@@ -67,7 +72,6 @@ header.navbar .menu-btn {
 }
 
 header.navbar .menu-btn i.menu--open {
-  font-size: 2rem;
   color: #141414;
 }
 
@@ -91,8 +95,6 @@ header.navbar nav.navlinks {
 }
 
 header.navbar nav.navlinks i.menu--close {
-  display: block;
-  font-size: 2rem;
   float: right;
   color: #f2f2f2;
 }
@@ -218,8 +220,10 @@ header.navbar nav.navlinks {
 }
 
 .main-wrapper main.hero--content article.features--section .wrapper ul.features-list li::before {
-  font-family: 'Material Icons';
-  content: 'check_circle';
+  display: inline-block;
+  content: '\f058';
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
   color: #008cff;
   margin-right: 0.5em;
 }
@@ -233,32 +237,74 @@ header.navbar nav.navlinks {
   padding: 1em;
 }
 
-.main-wrapper section.testimonials .wrapper ul.testimonials-cards li.card {
+.main-wrapper section.testimonials .wrapper h2 {
+  text-align: center;
+  margin-top: 1em;
+}
+
+.main-wrapper section.testimonials .wrapper ul.testimonials-cards {
   list-style-type: none;
+}
+
+.main-wrapper section.testimonials .wrapper ul.testimonials-cards li.card {
   background-color: #146eb8;
-  height: 250px;
-  margin: 5em 0;
-  padding: 1em;
+  height: 300px;
+  margin: 2em 0;
   border: 1px solid #646464;
   border-radius: 1em;
   text-align: center;
-}
-
-.main-wrapper section.testimonials .wrapper ul.testimonials-cards li.card img {
-  height: 6rem;
-  width: 6rem;
-  border-radius: 6em;
-  margin-top: -4em;
+  -webkit-box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.19), 0 0.2em 0.2em rgba(0, 0, 0, 0.23);
+          box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.19), 0 0.2em 0.2em rgba(0, 0, 0, 0.23);
 }
 
 .main-wrapper section.testimonials .wrapper ul.testimonials-cards li.card blockquote {
-  color: #f2f2f2;
-  padding: 1em;
+  background-color: #f2f2f2;
+  color: #323232;
+  padding: 1.2em 1em;
+  height: 60%;
+  text-align: left;
+  border-radius: 1em 1em 0 0;
 }
 
-.main-wrapper section.testimonials .wrapper ul.testimonials-cards li.card cite {
-  padding: 1em;
-  margin-left: 8em;
+.main-wrapper section.testimonials .wrapper ul.testimonials-cards li.card blockquote::before {
+  content: '\f10d';
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 2rem;
+  opacity: 0.2;
+  margin-right: 0.3em;
+}
+
+.main-wrapper section.testimonials .wrapper ul.testimonials-cards li.card footer {
+  height: 40%;
+  border-radius: 0 0 1em 1em;
+}
+
+.main-wrapper section.testimonials .wrapper ul.testimonials-cards li.card footer img {
+  height: 6rem;
+  width: 6rem;
+  border: 0.3rem solid #f2f2f2;
+  border-radius: 6em;
+  margin-top: -3.2em;
+}
+
+.main-wrapper section.testimonials .wrapper ul.testimonials-cards li.card footer cite {
+  display: block;
+  color: #f2f2f2;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-style: normal;
+  font-weight: 600;
+  margin-top: 0.3em;
+}
+
+.main-wrapper section.testimonials .wrapper ul.testimonials-cards li.card footer cite p {
+  font-size: 0.8rem;
+  font-style: italic;
+  letter-spacing: 0.1em;
+  font-weight: 400;
+  text-transform: none;
+  opacity: 0.8;
 }
 
 .main-wrapper section.contact {
@@ -296,19 +342,31 @@ header.navbar nav.navlinks {
 }
 
 .main-wrapper section.contact .wrapper form input[type=text] {
-  padding: 0.2em 0.5em;
+  padding: 0.2em 2.2em 0.2em 0.5em;
   font-size: 1rem;
   height: 2em;
   width: 100%;
-  border: 1px solid #008cff;
+  border: 1px solid #646464;
   border-radius: 0.2em;
 }
 
+.main-wrapper section.contact .wrapper form input[type=text]#name {
+  background: url("../assets/icons/account_circle_black_24dp.svg") no-repeat scroll 98% 50%;
+}
+
+.main-wrapper section.contact .wrapper form input[type=text]#email {
+  background: url("../assets/icons/alternate_email_black_24dp.svg") no-repeat scroll 98% 50%;
+}
+
 .main-wrapper section.contact .wrapper form textarea {
-  padding: 0.2em 0.5em;
+  padding: 0.2em 2.2em 0.2em 0.5em;
   font-size: 1rem;
-  border: 1px solid #008cff;
+  border: 1px solid #646464;
   border-radius: 0.2em;
+}
+
+.main-wrapper section.contact .wrapper form textarea#message {
+  background: url("../assets/icons/chat_bubble_black_24dp.svg") no-repeat scroll 98% 5%;
 }
 
 .main-wrapper section.contact .wrapper form input[type=submit] {
@@ -329,9 +387,14 @@ header.navbar nav.navlinks {
       align-self: center;
 }
 
+.main-wrapper section.contact .wrapper form input[type=submit]:hover, .main-wrapper section.contact .wrapper form input[type=submit]:active, .main-wrapper section.contact .wrapper form input[type=submit]:focus {
+  background-color: #146eb8;
+}
+
 .main-wrapper section.contact .wrapper picture.map {
-  border: 1px solid #141414;
+  border: 1px solid #646464;
   border-radius: 1em;
+  height: 200px;
 }
 
 .main-wrapper section.contact .wrapper picture.map img {
@@ -342,44 +405,82 @@ header.navbar nav.navlinks {
      object-fit: cover;
 }
 
+.main-wrapper footer.footer {
+  background-color: #141414;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #f2f2f2;
+}
+
+.main-wrapper footer.footer .social-wrapper {
+  text-align: center;
+}
+
+.main-wrapper footer.footer .social-wrapper i {
+  margin: 0 0.2em;
+}
+
+.main-wrapper footer.footer .social-wrapper i:hover, .main-wrapper footer.footer .social-wrapper i:active, .main-wrapper footer.footer .social-wrapper i:focus {
+  color: #008cff;
+}
+
+.main-wrapper footer.footer .social-wrapper a {
+  color: #008cff;
+}
+
+.main-wrapper footer.footer .social-wrapper a::after {
+  content: '\f0e0';
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 400;
+  font-style: normal;
+  color: #f2f2f2;
+  margin-left: 0.5em;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.main-wrapper footer.footer address {
+  line-height: 1.2;
+  text-align: center;
+  color: #646464;
+}
+
+.main-wrapper footer.footer address a.website {
+  color: #008cff;
+}
+
+.main-wrapper footer.footer address a.website::before {
+  content: '\f57e';
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  font-style: normal;
+  color: #f2f2f2;
+  margin-right: 0.5em;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.main-wrapper footer.footer p.copyright {
+  font-size: .8rem;
+  color: #646464;
+}
+
 .main-wrapper section.about--section {
   background-color: lightgreen;
 }
 
 .main-wrapper section.skills--section {
   background-color: lightpink;
-}
-
-@media screen and (min-width: 401px) and (max-width: 960px) {
-  article.intro--section,
-  article.basic-skills--section {
-    width: 50%;
-    height: 40%;
-  }
-  picture.hero-image--container {
-    height: 60%;
-  }
-}
-
-@media screen and (min-width: 961px) {
-  .root-container {
-    width: clamp(1024px, 1360px, 1920px);
-    margin: 0 auto;
-  }
-  main.hero--content article.intro--section,
-  main.hero--content article.basic-skills--section {
-    width: 30%;
-    height: 100%;
-  }
-  main.hero--content picture.hero-image--container {
-    width: 40%;
-    height: 100%;
-  }
-  main.hero--content article.intro--section {
-    -webkit-box-ordinal-group: 0;
-        -ms-flex-order: -1;
-            order: -1;
-  }
 }
 
 .dialog--box {
@@ -399,25 +500,27 @@ header.navbar nav.navlinks {
 }
 
 .dialog--box .wrapper {
-  border: 1px solid #d14646;
+  border: 1px solid rgba(209, 70, 70, 0.5);
   border-radius: 1em;
   height: 200px;
   width: 80%;
   padding: 1em;
-  background: #f8d8db;
+  background: linear-gradient(132deg, rgba(209, 70, 70, 0.1), rgba(209, 70, 70, 0.5));
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -425,19 +528,24 @@ header.navbar nav.navlinks {
           transform: translate(-50%, -50%);
 }
 
+.dialog--box .wrapper i {
+  color: #323232;
+}
+
 .dialog--box .wrapper h2 {
-  color: #d14646;
+  color: #323232;
 }
 
 .dialog--box .wrapper p {
   margin-top: 1em;
+  color: #fff;
 }
 
 .dialog--box .wrapper button.dialog-close {
-  background: #fcc0c6;
-  border: 1px solid #d14646;
+  color: #f8d8db;
+  background-color: #d14646;
+  border: 1px solid rgba(209, 70, 70, 0.5);
   border-radius: 8em;
-  color: #d14646;
   font-size: 1.2rem;
   padding: 0.5em 2em;
   margin-top: 1em;
@@ -447,25 +555,44 @@ header.navbar nav.navlinks {
   font-weight: bold;
 }
 
-@-webkit-keyframes point-tingle {
-  50% {
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
+.dialog--box .wrapper button.dialog-close:hover, .dialog--box .wrapper button.dialog-close:active, .dialog--box .wrapper button.dialog-close:focus {
+  background-color: #c23636;
+  color: #fff;
+}
+
+@media screen and (min-width: 401px) and (max-width: 960px) {
+  .dialog--box {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
   }
-  100% {
-    -webkit-transform: translate(-50%, -40%);
-            transform: translate(-50%, -40%);
+  .dialog--box .wrapper {
+    width: 320px;
+  }
+  .dialog--box .wrapper::after {
+    content: 'try mobile version instead';
+    font-size: 1.2rem;
+    font-family: "Jeko-Bold", sans-serif;
+    color: #c23636;
+    position: absolute;
+    top: 110%;
   }
 }
 
-@keyframes point-tingle {
-  50% {
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
+@media screen and (min-width: 961px) {
+  .dialog--box {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
   }
-  100% {
-    -webkit-transform: translate(-50%, -40%);
-            transform: translate(-50%, -40%);
+  .dialog--box .wrapper {
+    width: 400px;
+  }
+  .dialog--box .wrapper::after {
+    content: 'try mobile version instead';
+    font-size: 1.5rem;
+    font-family: "Jeko-Bold", sans-serif;
+    color: #c23636;
+    position: absolute;
+    top: 110%;
   }
 }
 /*# sourceMappingURL=main.css.map */
