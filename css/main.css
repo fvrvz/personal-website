@@ -31,9 +31,7 @@ h2 {
 
 header.navbar {
   height: 8vh;
-  background: linear-gradient(132deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.3));
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
+  background-color: #f2f2f2;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   position: fixed;
   top: 0;
@@ -584,12 +582,9 @@ header.navbar nav.navlinks {
   position: fixed;
   top: 0;
   left: 0;
-  -webkit-transform: translateY(-100%);
-          transform: translateY(-100%);
-  -webkit-transition: -webkit-transform 0.5s ease;
-  transition: -webkit-transform 0.5s ease;
-  transition: transform 0.5s ease;
-  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+  display: none;
+  -webkit-transition: display 0.5s ease;
+  transition: display 0.5s ease;
 }
 
 .dialog--box .wrapper {
@@ -773,6 +768,7 @@ header.navbar nav.navlinks {
   }
   header.navbar nav.navlinks ul.nav-btn li a {
     font-size: 1rem;
+    color: #141414;
   }
   header.navbar nav.navlinks ul.nav-btn li a:active {
     font-weight: 600;
@@ -875,11 +871,13 @@ header.navbar nav.navlinks {
     padding: 0 1.2em;
     background: #008cff;
     border-radius: 1em;
+    color: white;
     -webkit-transition: background .3s ease;
     transition: background .3s ease;
   }
   .nav-cta:active, .nav-cta:hover, .nav-cta:focus {
-    background: #dbf0ff;
+    background: #146eb8;
+    color: #fff;
   }
   .dialog--box .wrapper {
     width: 400px;

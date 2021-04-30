@@ -42,7 +42,8 @@ h2 {
 header.navbar {
     height: 8vh;
 
-    @include glass-gradient-white;
+    // @include glass-gradient-white;
+    background-color: #f2f2f2;
     border-bottom: 1px solid rgba(255,255,255,0.2);
 
     position: fixed;
@@ -553,8 +554,8 @@ header.navbar {
     top: 0;
     left: 0;
 
-    transform: translateY(-100%);
-    transition: transform 0.5s ease;
+    display: none;
+    transition: display 0.5s ease;
 
     
     .wrapper {
@@ -740,6 +741,7 @@ header.navbar {
                 all: unset;
                 margin-right: 6rem;
 
+
                 li {
                     all: unset;
                     list-style: none;
@@ -747,6 +749,7 @@ header.navbar {
 
                     a {
                         font-size: 1rem;
+                        color: $clr-heading-dark;
 
                         &:active {
                             font-weight: 600;
@@ -882,13 +885,16 @@ header.navbar {
         padding: 0 1.2em;
         background: $clr-primary;
         border-radius: 1em;
+        
+        color: white;
 
         transition: background .3s ease;
 
         &:active,
         &:hover,
         &:focus {
-            background: $clr-primary-lightshade;
+            background: $clr-primary-darkshade;
+            color: #fff;
         }
     }
     

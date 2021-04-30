@@ -8,13 +8,13 @@ const dialogBox = document.querySelector('#dialog');
 const dialogClose = document.querySelector('.dialog-close');
 
 submitBtn.addEventListener('click', () => {
-    dialogBody.style.transform = 'translateY(0)';
+    dialogBody.style.display = 'block';
     // dialogBox.style.transform = 'unset';
     // dialogBox.style.top = 'unset';
 })
 
 dialogClose.addEventListener('click', () => {
-    dialogBody.style.transform = 'translateY(-100%)';
+    dialogBody.style.display = 'none';
 })
 
 
