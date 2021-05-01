@@ -7,7 +7,7 @@
 // google font imports
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,600;1,200;1,300;1,400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Seaweed+Script&family=Righteous&family=Unlock&display=swap');
 
 // variable file import
@@ -43,8 +43,8 @@ header.navbar {
     height: 8vh;
 
     // @include glass-gradient-white;
-    background-color: #f2f2f2;
-    border-bottom: 1px solid rgba(255,255,255,0.2);
+    background-color: $clr-heading-dark;
+    // border-bottom: 1px solid rgb(212, 212, 212);
 
     position: fixed;
     top: 0;
@@ -60,13 +60,17 @@ header.navbar {
     }
 
     h3.logo {
+        a {
+            text-decoration: none;
+            color: unset;
+        }
         span {
             color: $clr-danger-darkshade;
             font-family: $font-logo-span;
         }
 
         font-family: $font-logo;
-        color: $clr-heading-dark;
+        color: #f2f2f2;
         font-size: 1.5rem;
 
     }
@@ -79,7 +83,7 @@ header.navbar {
 
         i.menu--open {
             // font-size: 2rem;
-            color: $clr-heading-dark;
+            color: #f2f2f2;
 
             &:hover,
             &:active,
@@ -104,7 +108,7 @@ header.navbar {
         transition: transform .3s ease-in-out;
 
         i.menu--close {
-            // font-size: 2rem;
+            margin: 1em;
             float: right;
             color: $clr-heading-light;
 
@@ -137,6 +141,22 @@ header.navbar {
                 color: $clr-primary;
             }
         }
+
+        .social-wrapper {
+            all: unset;
+            margin-left: 1em;
+            margin-top: 8em;
+            color: $clr-primary;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            flex-direction: column;
+
+            a {
+                font-size: 0.8rem;
+                text-decoration: underline;
+            }
+        }
     }
 
     nav.navlinks {
@@ -156,14 +176,19 @@ header.navbar {
     main.hero--content {
         @include flex-wrap;
 
+        height: 95vh;
+        width: 100vw;
+
+        // background-color: violet;
+
         picture.hero-image--container {
-    
+                
             img {
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
                 object-position: top;
-                // filter: grayscale(1);
+                filter: grayscale(1);
             }
         }
     
@@ -171,7 +196,25 @@ header.navbar {
             background-color: $clr-heading-light;
 
             .wrapper {
-                padding: 1em;
+                padding: 2em;
+                padding-top: 4em;
+
+                // background-color: wheat;
+
+                position: relative;
+
+                .stroke-heading {
+                    color: $clr-primary;
+                    opacity: 0.3;
+                    font-size: clamp(8rem, 15vw, 10rem);
+
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    transform: translateY(-28%);
+
+                    z-index: 1;
+                }
                 
                 h1.heading {
                     font-size: clamp(2rem, 5vw, 3rem);
@@ -194,35 +237,75 @@ header.navbar {
 
             }
         }
-    
-        article.features--section {
-            background-color: $clr-heading-dark;
+    }
 
-            .wrapper {
-                padding: 1em;
-                // background: lightskyblue;
+    section.features--section {
+        background-color: $clr-heading-dark;
 
-                ul.features-list {
-                    
-                    li {
-                        list-style-type: none;
-                        color: $clr-heading-light;
-                        font-size: 1.2rem;
-                        margin: 0.5em 0;
+        .wrapper {
+            padding: 2em;
 
-                        display: flex;
-                        align-items: center;
+            ul.features-list {
+                
+                li {
+                    list-style-type: none;
+                    color: $clr-heading-light;
+                    font-size: 1.2rem;
+                    margin: 0.8em 0;
 
-                        &::before {
-                            display: inline-block;
-                            // vertical-align: middle;
-                            content: '\f058';
-                            font-family: 'Font Awesome 5 Free';
-                            font-weight: 900;
-                            color: $clr-primary;
-                            margin-right: 0.5em;
-                        }
+                    display: flex;
+                    align-items: center;
+
+                    img {
+                        width: 50px;
+                        margin-right: 1em;
                     }
+                }
+            }
+        }
+    }
+
+    section.about--section {
+        height: 92vh;
+        // background-color: lightgreen;
+
+        text-align: center;
+
+        .wrapper {
+            width: 100%;
+            height: 100%;
+
+            padding: 2em 1em;
+
+            h2.section-heading {
+                margin-bottom: 1em;
+            }
+
+            .inner-wrapper {
+                height: 90%;
+                // background: yellowgreen;
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+
+                picture.img-container {
+                    
+                    img {
+                        width: 50%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+
+                article.about-me {
+                    // background: yellow;
+
+                    p {
+                        text-align: left;
+                        padding: 0 2em;
+                        color: $clr-text-light;
+                    }
+                    
                 }
             }
         }
@@ -253,11 +336,12 @@ header.navbar {
 
                 li.card {
                     // background-color: $clr-primary-darkshade;
-                    @include glass-gradient-white;
+                    // @include glass-gradient-white;
+                    width: 250px;
                     height: 300px;
                     margin: 2em 0;
                     border: 1px solid $clr-text-light;
-                    border-radius: 1em;
+                    border-radius: 0.5em;
                     text-align: center;
 
                     box-shadow: 0 0.5em 1em rgba(0,0,0,0.19),
@@ -361,11 +445,11 @@ header.navbar {
                 border: 1px solid $clr-text-light;
 
                 // @include glass-gradient-black;
-                background: $clr-primary-lightshade;
+                // background: ;
                 
                 form.contact--form {
                     height: 400px;
-
+                    
                     padding: 1em;
     
                     // background-color: lightgreen;
@@ -421,7 +505,7 @@ header.navbar {
                         margin-top: 1em;
                         width: fit-content;
                         padding: 1em 3em;
-                        font-weight: bold;
+                        font-weight: 600;
                         font-size: 1rem;
                         background-color: $clr-primary;
                         color: #fff;
@@ -448,6 +532,7 @@ header.navbar {
                         height: 100%;
                         object-fit: cover;
                         object-position: 0px 0px;
+                        filter: invert(1);
                     }
                 }
             }
@@ -456,6 +541,8 @@ header.navbar {
     }
 
     footer.footer {
+        height: 220px;
+
         padding: 1em;
         background-color: $clr-heading-dark;
 
@@ -535,9 +622,7 @@ header.navbar {
         }
     }
     
-    section.about--section {
-        background-color: lightgreen;
-    }
+    
 
     section.skills--section {
         background-color: lightpink;
@@ -555,7 +640,9 @@ header.navbar {
     left: 0;
 
     display: none;
-    transition: display 0.5s ease;
+    transition: display 0.8s ease-in-out;
+
+    z-index: 999;
 
     
     .wrapper {
@@ -599,7 +686,7 @@ header.navbar {
             margin-top: 1em;
 
             width: fit-content;
-            font-weight: bold;
+            font-weight: 600;
 
             &:hover,
             &:active,
@@ -619,11 +706,30 @@ header.navbar {
     }
 
     picture.hero-image--container {
-        height: calc(320px + 8vh);
+        height: 50%;
+        padding-top: 6vh;
     }
+    article.intro--section {
+        height: 50%;
+    }
+
+    section.about--section {
+
+        picture.img-container {
+            height: 200px;
+        }
+
+        article.about-me {
+            height: 50%;
+        }
+    }
+
+
+
 
     form.contact--form {
         border-bottom: 1px solid $clr-text-light;
+        width: 100%;
     }
     picture.map {
         border-radius: 0 0 1em 1em;
@@ -641,15 +747,26 @@ header.navbar {
     }
     
     main.hero--content {
-        min-height: 90vh;
+        // min-height: 90vh;
 
-        article.intro--section,
-        article.features--section {
-            width: 50%;
-            height: 40%;
+        article.intro--section {
+            height: 50%;
         }
         picture.hero-image--container {
-            height: 60%;
+            height: 50%;
+        }
+    }
+
+    section.about--section {
+
+        picture.img-container {
+            height: 50%;
+            // background: wheat;
+        }
+        article.about-me {
+            height: 50%;
+            // background: violet;
+            padding-top: 4em;
         }
     }
 
@@ -696,6 +813,8 @@ header.navbar {
     .dialog--box{
         .wrapper {
             width: 320px;
+            height: 30%;
+            padding: 1.5em;
         }
     }
     
@@ -703,8 +822,9 @@ header.navbar {
 
 // desktop media queries
 @media screen and (min-width: 961px) {
-    body {
-        width: clamp(1024px, 1360px, 1920px);
+    .root-container {
+        min-width: 1350px;
+        max-width: 1440px;
         margin: 0 auto;
     }
     
@@ -741,7 +861,6 @@ header.navbar {
                 all: unset;
                 margin-right: 6rem;
 
-
                 li {
                     all: unset;
                     list-style: none;
@@ -749,13 +868,19 @@ header.navbar {
 
                     a {
                         font-size: 1rem;
-                        color: $clr-heading-dark;
+                        color: #fff;
 
                         &:active {
                             font-weight: 600;
                         }
+                        &:hover {
+                            color: $clr-primary;
+                        }
                     }
                 }
+            }
+            .social-wrapper {
+                display: none;
             }
         }
     }
@@ -763,17 +888,13 @@ header.navbar {
 
     main.hero--content {
         article.intro--section,
-        article.features--section {
-            width: 30%;
-            height: 100%;
-        }
         picture.hero-image--container {
-            width: 40%;
+            width: 50%;
             height: 100%;
         }
 
         article.intro--section {
-            order: -1;
+            // order: -1;
 
             position: relative;
 
@@ -787,6 +908,19 @@ header.navbar {
                 top: 0;
                 left: 0;
             }
+        }
+    }
+
+    section.about--section {
+        align-items: center;
+
+        picture.img-container {
+            height: 80%;
+            width: 50%;
+        }
+        article.about-me {
+            width: 50%;
+            padding-right: 3em;
         }
     }
     
@@ -886,7 +1020,7 @@ header.navbar {
         background: $clr-primary;
         border-radius: 1em;
         
-        color: white;
+        // color: white;
 
         transition: background .3s ease;
 
@@ -902,6 +1036,8 @@ header.navbar {
     .dialog--box{
         .wrapper {
             width: 400px;
+            height: 40%;
+            padding: 2em;
         }
     }
     

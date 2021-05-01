@@ -16,7 +16,7 @@
     
     <!-- FONT AWESOME 5 CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/main.min.css">
     <script src="./js/main.js" defer></script>
 </head>
 <body>
@@ -25,7 +25,7 @@
         <!-- HEADER [NavBar] -->
         <header class="navbar">
             <div class="wrapper">
-                <h3 class="logo"><span>FK</span> Faraazy</h3>
+                <h3 class="logo"><a href="#"><span>FK</span> Faraazy</a></h3>
 
                 <div class="menu-btn">
                     <i class="fa fa-lg fa-bars menu--open" aria-hidden="true"></i>
@@ -36,9 +36,22 @@
                 
                 <ul class="nav-btn">
                     <li><a href="#">Home</a></li>
+                    <li><a href="#about">About</a></li>
                     <li><a href="#testimonials">Testimonials</a></li>
                     <li><a href="#contact" class="nav-cta">Contact</a></li>
                 </ul>
+                <div class="social-wrapper">
+                    <h3>Faraazy</h3>
+                    <div class="social-icons">
+                        <i class="fab fa-facebook facebook"></i>
+                        <i class="fab fa-instagram instagram"></i>
+                        <i class="fab fa-twitter twitter"></i>
+                        <i class="fab fa-github github"></i><br>
+                    </div>
+                    <small>
+                        Email <a href="mailto:faraazonwork@gmail.com">Faraaz Khhan</a><br>
+                    </small>
+                </div>
             </nav>
         </header>
 
@@ -46,28 +59,59 @@
         <div class="main-wrapper">
             <main class="hero--content">
                 <picture class="section hero-image--container">
-                    <img src="./assets/image/me.jpg" alt="FaraazKhhan">
+                    <img src="./assets/image/faiz.jpg" alt="FaraazKhhan">
                 </picture>
         
                 <article class="section intro--section">
                     <div class="wrapper">
-                        <h1 class="heading">Experience above everything <span>Always</span></h1>
-                        <p class="sub-heading">It comes with practice</p>
-                    </div>
-                </article>
-        
-                <article class="section features--section">
-                    <div class="wrapper">
-                        <ul class="features-list">
-                            <li>Easy to maintain</li>
-                            <li>Cheap in cost</li>
-                            <li>Performance oriented</li>
-                            <li>Highly scalable</li>
-                            <li>Mobile responsive</li>
-                        </ul>
+                        <span class="stroke-heading">Hey!</span>
+                        <h1 class="heading">I am <span>Faraaz</span></h1>
+                        <p class="sub-heading">Web-Developer! &#128515;</p>
                     </div>
                 </article>
             </main>
+
+            <section class="section features--section" id="skills">
+                <div class="wrapper">
+                    <ul class="features-list">
+                        <li>
+                            <img src="./assets/icons/designer.png" alt="">
+                            Web-Developer
+                        </li>
+                        <li>
+                            <img src="./assets/icons/ui-design.png" alt="">
+                            UI-UX Designer
+                        </li>
+                        <li>
+                            <img src="./assets/icons/photo.png" alt="">
+                            Photographer
+                        </li>
+                        <li>
+                            <img src="./assets/icons/paint-palette.png" alt="">
+                            Artist
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="section about--section" id="about">
+                <div class="wrapper">
+                    <h2 class="section-heading">Who am I &quest;</h2>
+                    <div class="inner-wrapper">
+                        <picture class="img-container">
+                            <img src="./assets/image/me.jpg" alt="Faraaz Khhan's image">
+                        </picture>
+
+                        <article class="about-me">
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum repudiandae unde quod saepe praesentium iusto, autem itaque? Quam ad sunt aspernatur, rerum optio illum odio iusto doloremque quas. Perspiciatis, non. Perspiciatis harum ipsam maxime dolorum dolor saepe exercitationem cupiditate. Et!
+                            </p>
+                            <!-- <button class="read-more">Read More</button> -->
+                        </article>
+                    </div>
+
+                </div>
+            </section>
         
             <section class="section testimonials" id="testimonials">
                 <div class="wrapper">
@@ -96,9 +140,9 @@
                         <li class="card">
                             <blockquote>Lorem ipsum dolor sit amet consectetur adipisicing elit.</blockquote>
                             <footer>
-                                <img src="./assets/image/1.jpg" alt="testimonal-3">
+                                <img src="./assets/image/faiz.jpg" alt="testimonal-3">
                                 <cite>
-                                    Chris Tobias
+                                    Faraaz
                                     <p>CEO - Example.com</p>
                                 </cite>
                             </footer>
