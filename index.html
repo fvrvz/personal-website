@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="./assets/favicon/site.webmanifest">
+  <link rel="mask-icon" href="./assets/favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="shortcut icon" href="./assets/favicon/favicon.ico">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="msapplication-config" content="./assets/favicon/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="author" content="Faraaz Khhan">
+  <meta name="keywords" content="faraaz khhan, faraazy, website, html, css, js, react, faraaz">
+  <meta name="description" content="My personal website, where you can know more about me. Feel free to visit.">
+  <title>Faraaz Khhan</title>
+
+  <!-- Google fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@700&family=Domine:wght@400;600;700&display=swap"
+    rel="stylesheet">
+  <!-- Font awesome 5 icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <!-- Flickity library -->
+  <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js" defer></script>
+  <!-- My own CSS utility classes -->
+  <link rel="stylesheet" href="./css/utility.css">
+  <!-- CSS -->
+  <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <header>
+    <figure class="logo">
+      <img src="./assets/logo.svg" alt="logo">
+    </figure>
+    <nav>
+      <a href="#about-section">About me</a>
+      <a href="#work-section">Works</a>
+      <a href="https://faraazkhhan.netlify.app" target="_blank">Portfolio</a>
+      <a href="#contact-section">Contact</a>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION -->
+  <main>
+    <figure class="img-container img-big">
+      <img src="./assets/image/faiz.jpg" alt="my-photo">
+    </figure>
+    <div class="intro-container">
+      <div class="heading">
+        <h1>Hi, I'm Faraaz</h1>
+        <h2>Web developer</h2>
+      </div>
+      <p>
+        I am a fresher and trying to build modern, resilient,
+        and inclusive Web user interfaces and designs,
+        with a strong focus on responsive design, performance, and accessibility.
+      </p>
+    </div>
+  </main>
+
+  <!-- DESCRIPTION SECTION -->
+  <section class="some-text-section section-sm">
+    <blockquote>
+      <p>I use React as my personal favourite frontend MVC framework to build web applications.</p>
+      <p>And VueJS is my second choice, which I am currently trying to learn.</p>
+      <p>Although I have a decent experience in other web technologies like HTML, CSS and Javascript. 🙃</p>
+    </blockquote>
+  </section>
+
+  <!-- ABOUT-ME SECTION -->
+  <section class="about-section" id="about-section">
+    <h2 class="section-title">About me</h2>
+    <div class="section-inner-wrapper">
+      <figure class="img-container">
+        <img src="./assets/image/me.jpg" alt="my-photo">
+      </figure>
+      <div class="about-text">
+        <div class="heading">
+          <h1>Hi, I'm Faraaz.</h1>
+        </div>
+        <p>
+          I came from engineering background, so this is the obvious reason why I chose Web designing and web
+          development as my primary domain.
+        </p>
+        <p>
+          I like to create thing which I can instantly see its working. I am very fond of colors and creativity.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="trivia-section">
+    <div class="trivia-image">
+      <figure class="img-container img-lg">
+        <img src="./assets/image/me_in_frame.jpg" alt="my-photo">
+      </figure>
+      <figcaption>
+        This photo of me was taken in February 2020, when I visited 
+        <a href="https://en.wikipedia.org/wiki/Gwalior_Fort" target="_blank" class="place-link" rel="noreferrer noopener">Gwalior Fort
+        </a>
+      </figcaption>
+    </div>
+    <div class="trivia-text">
+      <div class="heading">
+        <h1>Some trivia about me</h1>
+      </div>
+      <ul class="trivia-list">
+        <li>Beside my professional life, I am an artist, I love painting and art.</li>
+        <li>Nature photography is kinda my crush <i class="fa fa-heart" style="color: #fe4164"></i>. It gives me so much
+          inner peace, whenever I feel bored, I go out somewhere I feel I can feel the art of nature.</li>
+        <li>And Travelling oh! ho, <i class="fa fa-plane" style="color: #1E90FF"></i> This thing is beyond everything.
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- MY-SKILLS SECTION -->
+  <section class="skills-section" id="skills-section">
+    <h2 class="section-title">My skills & hobbies</h2>
+    <ul class="skills-list js-flickity" data-flickity-options='{"wrapAround": true}'>
+      <li class="skill carousel-cell">
+        <figure class="skill-image">
+          <img src="./assets/icons/structure.svg" alt="skill icon">
+        </figure>
+        <div class="skill-body">
+          <h5 class="skill-title">Web developer</h5>
+          <p class="card-text">Web development is my primary domain of work.</p>
+        </div>
+      </li>
+
+      <li class="skill carousel-cell">
+        <figure class="skill-image">
+          <img src="./assets/icons/design.svg" alt="skill icon">
+        </figure>
+        <div class="skill-body">
+          <h5 class="skill-title">UI designer</h5>
+          <p class="card-text">Web designing is also anothing thing I do most of the time.</p>
+        </div>
+      </li>
+
+      <li class="skill carousel-cell">
+        <figure class="skill-image">
+          <img src="./assets/icons/camera.svg" alt="skill icon">
+        </figure>
+        <div class="skill-body">
+          <h5 class="skill-title">Photographer</h5>
+          <p class="card-text">This skill of mine, which I enjoy a lot.</p>
+        </div>
+      </li>
+
+      <li class="skill carousel-cell">
+        <figure class="skill-image">
+          <img src="./assets/icons/paint-palette.svg" alt="skill icon">
+        </figure>
+        <div class="skill-body">
+          <h5 class="skill-title">Artist</h5>
+          <p class="card-text">Painting and drawing are my hidden skills since my childhood.</p>
+        </div>
+      </li>
+
+      <li class="skill carousel-cell">
+        <figure class="skill-image">
+          <img src="./assets/icons/blog.svg" alt="skill icon">
+        </figure>
+        <div class="skill-body">
+          <h5 class="skill-title">Blogger</h5>
+          <p class="card-text">The thing I do sometimes.</p>
+        </div>
+      </li>
+
+      <li class="skill carousel-cell">
+        <figure class="skill-image">
+          <img src="./assets/icons/write.svg" alt="skill icon">
+        </figure>
+        <div class="skill-body">
+          <h5 class="skill-title">Writer</h5>
+          <p class="card-text">My imagination is always around fiction.</p>
+        </div>
+      </li>
+
+      <li class="skill carousel-cell">
+        <figure class="skill-image">
+          <img src="./assets/icons/travel.svg" alt="skill icon">
+        </figure>
+        <div class="skill-body">
+          <h5 class="skill-title">Travelling</h5>
+          <p class="card-text">First love of my life.</p>
+        </div>
+      </li>
+
+      <li class="skill carousel-cell">
+        <figure class="skill-image">
+          <img src="./assets/icons/music-note.svg" alt="skill icon">
+        </figure>
+        <div class="skill-body">
+          <h5 class="skill-title">Music</h5>
+          <p class="card-text">I listen music, it helps me to think about new ideas.</p>
+        </div>
+
+      <li class="skill carousel-cell">
+        <figure class="skill-image">
+          <img src="./assets/icons/clapperboard.svg" alt="skill icon">
+        </figure>
+        <div class="skill-body">
+          <h5 class="skill-title">Movies</h5>
+          <p class="card-text">Well, I am a huge fan of Sci-Fi movies.</p>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <!-- MY WORKS SECTION -->
+  <section class="work-section" id="work-section">
+    <h2 class="section-title">My works</h2>
+
+    <ul class="project-list">
+      <li class="project">
+        <div class="project__intro">
+          <h3 class="project-title">Earsify: Music Streaming Web-App</h3>
+          <p>
+            Earsify is an online music streaming single page application. You can listen to unlimited music and even
+            download them easily, without any login or signup formalities.
+          </p>
+        </div>
+        <div class="project__card">
+          <div class="card-image">
+            <img src="./assets/image/earsify_web.png" alt="project screenshot">
+          </div>
+          <a href="https://earsify.netlify.app" target="_blank" class="card-btn btn btn-accent btn-icon-link">Visit</a>
+        </div>
+      </li>
+
+      <li class="project">
+        <div class="project__intro">
+          <h3 class="project-title">Lookoreo</h3>
+          <p>
+            Lookorea is a website where you can easily find some hairstyle expertise. This platform just gives you the
+            trending hairstyles and some tips for haircare as well.
+          </p>
+        </div>
+        <div class="project__card">
+          <div class="card-image">
+            <img src="./assets/image/lookoreo.png" class="card-img" alt="project screenshot">
+          </div>
+          <a href="#" class="card-btn btn btn-accent btn-icon-link">Visit</a>
+        </div>
+      </li>
+
+      <li class="project">
+        <div class="project__intro">
+          <h3 class="project-title">Picture Grid</h3>
+          <p>
+            This is just a web-application to manipulating the background of webpage, It uses Nodejs and express as
+            backend framework and EJS as templating engine.
+          </p>
+        </div>
+        <div class="project__card">
+          <div class="card-image">
+            <img src="./assets/image/picture-grid.png" alt="project screenshot">
+          </div>
+          <a href="https://image-grid-expressjs.herokuapp.com/" target="_blank" class="card-btn btn btn-accent btn-icon-link">Visit</a>
+        </div>
+      </li>
+
+      <li class="project">
+        <div class="project__intro">
+          <h3 class="project-title">Musixyler</h3>
+          <p>
+            Well this is just a prototype design I created, when I was thinking to do something random. 😁
+          </p>
+        </div>
+        <div class="project__card">
+          <div class="card-image">
+            <img src="./assets/image/musixyler.png" alt="project screenshot">
+          </div>
+          <a href="https://faraazkhhan.github.io/musixyler" target="_blank" class="card-btn btn btn-accent btn-icon-link">Visit</a>
+        </div>
+      </li>
+    </ul>
+
+  </section>
+
+  <!-- CONTACT FORM SECTION -->
+  <section class="contact-section section-sm" id="contact-section">
+    <h2 class="section-title">Contact me</h2>
+    <form action="https://formspree.io/f/xwkablar" method="POST" class="mx-auto" id="contact-form"
+      enctype="multipart/form-data">
+      <div class="input-wrapper">
+        <label for="sender-name" class="form-label">Enter your name</label>
+        <input type="text" class="form-control" name="_name" id="sender-name" required autocomplete="off">
+      </div>
+      <div class="input-wrapper">
+        <label for="sender-email" class="form-label">Enter your email</label>
+        <input type="email" class="form-control" name="_replyto" id="sender-email" required autocomplete="off">
+      </div>
+      <div class="input-wrapper">
+        <label for="sender-subject" class="form-label">Subject of message</label>
+        <input type="text" class="form-control" name="_subject" id="sender-subject" required autocomplete="off">
+      </div>
+      <div class="input-wrapper">
+        <label for="sender-message" class="form-label">Enter your name</label>
+        <textarea class="form-control" name="_message" id="sender-message" required autocomplete="off"></textarea>
+      </div>
+      <button type="submit" class="btn btn-accent2">Send message</button>
+    </form>
+  </section>
+
+  <!-- FOOTER AREA -->
+  <footer class="main-footer">
+    <div class="footer-wrapper mx-auto">
+      <section class="footer-first-row">
+        <div class="text">
+          <span>Get connected with me on social networks:</span>
+        </div>
+
+        <div class="social-container">
+          <a href="https://www.instagram.com/faraazy/" target="_blank" rel="noreferrer noopener">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.facebook.com/FaraazKhhan/" target="_blank" rel="noreferrer noopener">
+            <i class="fab fa-facebook"></i>
+          </a>
+          <a href="https://www.twitter.com/FaraazKhhan/" target="_blank" rel="noreferrer noopener">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/FaraazKhhan/" target="_blank" rel="noreferrer noopener">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://www.github.com/FaraazKhhan/" target="_blank" rel="noreferrer noopener">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+      </section>
+
+      <section class="footer-middle-row">
+        <h6 class="col-title">
+          <i class="fas fa-gem me-3"></i> Faraaz Khhan
+        </h6>
+        <p>
+          Feel free to contact me, if you think I can help you, And thanks for visiting.😉
+        </p>
+      </section>
+
+      <section class="footer-last-row">
+        <div class="footer-col-links">
+          <h6 class="col-title">
+            Useful links
+          </h6>
+          <p>
+            <a href="#about-section">About me</a>
+          </p>
+          <p>
+            <a href="https://faraazkhhan.netlify.app" target="_blank">My portfolio</a>
+          </p>
+          <p>
+            <a href="#work-section">My works</a>
+          </p>
+          <p>
+            <a href="contact-section">Contact me</a>
+          </p>
+        </div>
+
+        <div class="footer-col-address">
+          <h6 class="col-title">
+            Contact
+          </h6>
+          <p><i class="fas fa-home me-3"></i> Guna, Madhya Pradesh, IN</p>
+          <p><i class="fas fa-envelope me-3"></i> faraazonwork@gmail.com</p>
+          <p><i class="fas fa-phone me-3"></i> + 91 000 000 00</p>
+        </div>
+
+      </section>
+    </div>
+
+    <div class="copyright-container">
+      &copy; 2021 Copyright: <span>faraazy</span>
+    </div>
+  </footer>
+
+  <!-- SCRIPT FOR FORM FIELDS RESETTING AFTER SUBMIT -->
+  <script>
+    document.querySelector('#contact-form').addEventListener('submit', () => {
+      document.querySelector('#sender-name').value = "";
+      document.querySelector('#sender-email').value = "";
+      document.querySelector('#sender-subject').value = "";
+      document.querySelector('#sender-message').value = "";
+    });
+  </script>
+</body>
+
+</html>
