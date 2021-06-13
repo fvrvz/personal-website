@@ -1,0 +1,128 @@
+/* Utility classes */ 
+.heading {
+    margin-bottom: 1em;
+}
+.section-title {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1.5em;
+}
+
+.social-container a {
+    text-decoration: none;
+    color: var(--color-gray-400);
+}
+
+// Margin classes
+.mx-auto {
+    margin: 0 auto;
+}
+
+// Paddings
+.px-1 {
+    padding: 1em 0;
+}
+.py-2 {
+    padding: 2em 0;
+}
+
+.section-sm {
+    min-height: fit-content;
+    background-color: var(--color-lavender);
+}
+
+// Form classes
+form > .input-wrapper {
+    margin-bottom: 1.5em;
+}
+button:focus,
+textarea:focus,
+input:focus {
+    outline: none;
+}
+.form-label {
+    display: block;
+    color: var(--label-color);
+    font-size: 1rem;
+    margin-bottom: 0.5em;
+
+    &::after {
+        content: ':';
+    }
+}
+.form-control {
+    border: 1px solid var(--color-accent-400);
+    border-radius: 4px;
+    width: 100%;
+    height: 2.25rem;
+    padding: 0 0.5em;
+    font-size: 1rem;
+    font-family: inherit;
+
+    &:focus {
+        box-shadow: 0 0 0 2.5px var(--color-accent-alpha50);
+    }
+}
+textarea.form-control {
+    height: 4rem;
+    padding: 0.5em;
+}
+
+// Button classes
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    border: none;
+    border-radius: var(--box-radius-min);
+    padding: 0.65em 1.5em;
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: inherit;
+    text-align: center;
+
+    &:focus {
+        box-shadow: 0 0 0 2.5px var(--color-label-alpha50);
+    }
+}
+.btn-sm {
+    font-size: 0.75rem;
+}
+.btn-lg {
+    font-size: 1.25rem;
+}
+.btn-accent {
+    background-color: var(--color-accent-400);
+    color: #f2f2f2;
+
+    &:hover {
+        background-color: var(--color-accent-800);
+    }
+    &:active {
+        background-color: var(--color-accent-400);
+    }
+    &:focus {
+        box-shadow: 0 0 0 2.5px var(--color-accent-alpha50);
+    }
+}
+.btn-accent2 {
+    background-color: var(--color-accent2-400);
+    color: var(--color-gray-800);
+
+    &:hover {
+        background-color: var(--color-accent2-800);
+    }
+    &:active {
+        background-color: var(--color-accent2-400);
+    }
+    &:focus {
+        box-shadow: 0 0 0 2.5px var(--color-accent2-alpha50);
+    }
+}
+.btn-icon {
+    
+    &-link::before {
+        content: '\f35d';
+        font-family: 'Font Awesome 5 Free';
+        margin-right: 0.5em;
+    }
+}
